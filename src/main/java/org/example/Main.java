@@ -5,16 +5,18 @@ public class Main {
 
     /*1. Створити клас User, у якого будуть:
 поля userName, age, email, password, isActive(boolean), amountSpentMoney. password та age повинні мати модифікатор доступу private. Зробити геттери і сеттери з валідацією для private полів(валідація довільна).*/
-
+        int percent = 10;
         User newIvan = new User();
+        newIvan.amountSpentMoney = 100;
         newIvan.userName = "New Ivan";
         newIvan.getAge();
         newIvan.email = "ivan@email.com";
         newIvan.setPassword("new password");
         newIvan.isActive = false;
-        newIvan.amountSpentMoney = 100;
+        newIvan.amountSpentMoney = newIvan.amountSpentMoney - newIvan.addDiscount(percent);
 
-        System.out.println(newIvan.userName + " " + newIvan.getAge() + " email: " + newIvan.email + " password: " + newIvan.getPassword() + " is Active: " + newIvan.isActive + " AmountOfSpentMoney = " + newIvan.amountSpentMoney);
+
+        System.out.println(newIvan.userName + " " + newIvan.getAge() + " email: " + newIvan.email + " password: " + newIvan.getPassword() + " is Active: " + newIvan.isActive + " AmountOfSpentMoney = " + newIvan.amountSpentMoney + " Discount is = " + percent + " %");
 
 //  -конструктори: дефолтний; конструктор який приймає userName та контруктор який приймає userName та password.
         User ivan = new User("Ivan", "123");

@@ -12,6 +12,9 @@ public class User {
         //double purchasePrice;
         double amountSpentMoney;
 
+    public double addDiscount (int discount) {
+        return (amountSpentMoney * discount)/100;
+    }
 
 
     public int getAge () {
